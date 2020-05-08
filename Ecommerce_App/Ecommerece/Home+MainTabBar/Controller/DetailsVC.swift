@@ -21,13 +21,13 @@ class DetailsVC: UIViewController,UITableViewDelegate,UITableViewDataSource{
     var delegate:CartDelegate?
     var cartArray = [Item]()
     var product : Datum?
-var counterItem = 0
+    var counterItem = 0
     var header = ["Authorization": "Bearer\(NetworkHelper.getAccessToken() ?? "" )"]
     override func viewDidLoad() {
         super.viewDidLoad()
         
         loadProducts()
-      //  loadCart()
+        //  loadCart()
         DetailsTV.delegate = self
         DetailsTV.dataSource = self
         
@@ -38,7 +38,7 @@ var counterItem = 0
         
     }
     
-
+    
     func loadProducts() {
         
         guard let id = item?.id else { return }
@@ -62,34 +62,34 @@ var counterItem = 0
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DetailsCell", for: indexPath) as! DetailsCell
-         cell.name.text = details[indexPath.row].name
+        cell.name.text = details[indexPath.row].name
         cell.price.text = "السعر:  \(details[indexPath.row].price ?? "")"
         cell.configure(compines: self.details[indexPath.row])
         cell.CartButton.tag = indexPath.row
-       // cell.CartButton.addTarget(self, action: #selector(subscribeTapped(_:)), for: .touchUpInside)
-
+        // cell.CartButton.addTarget(self, action: #selector(subscribeTapped(_:)), for: .touchUpInside)
+        
         
         return cell
     }
     @objc func subscribeTapped(_ sender: UIButton){
-      // use the tag of button as index
-      guard let id = product?.id else{return}
-          
-          NetworkApi.sendRequest(method: .get, url: cart, parameters: ["product_id": id], header: header, completion: { (err,status,response: CartResponse?) in
-              if err == nil{
-                  guard let message = response?.message else{return}
-                  
-                  if status!{
-                      self.counterItem += 1
-                      print(message)
-                   
-                  }else{
-                  }
-              }
-          })
-      }
-
-   
+        // use the tag of button as index
+        guard let id = product?.id else{return}
+        
+        NetworkApi.sendRequest(method: .get, url: cart, parameters: ["product_id": id], header: header, completion: { (err,status,response: CartResponse?) in
+            if err == nil{
+                guard let message = response?.message else{return}
+                
+                if status!{
+                    self.counterItem += 1
+                    print(message)
+                    
+                }else{
+                }
+            }
+        })
+    }
+    
+    
 }
 extension UIViewController{
     fileprivate func startAnimation() {
