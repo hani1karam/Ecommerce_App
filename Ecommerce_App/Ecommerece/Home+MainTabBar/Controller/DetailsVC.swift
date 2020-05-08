@@ -66,20 +66,28 @@ var counterItem = 0
         cell.price.text = "السعر:  \(details[indexPath.row].price ?? "")"
         cell.configure(compines: self.details[indexPath.row])
         cell.CartButton.tag = indexPath.row
-        cell.CartButton.addTarget(self, action: #selector(subscribeTapped(_:)), for: .touchUpInside)
+       // cell.CartButton.addTarget(self, action: #selector(subscribeTapped(_:)), for: .touchUpInside)
 
         
         return cell
     }
     @objc func subscribeTapped(_ sender: UIButton){
       // use the tag of button as index
-      let youtuber = details[sender.tag]
-        let alert = UIAlertController(title: "شكرا لك" , message: "تم اضافه  \(youtuber.name ?? "")", preferredStyle: .alert)
-      let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-      alert.addAction(okAction)
-            
-      self.present(alert, animated: true, completion: nil)
-    }
+      guard let id = product?.id else{return}
+          
+          NetworkApi.sendRequest(method: .get, url: cart, parameters: ["product_id": id], header: header, completion: { (err,status,response: CartResponse?) in
+              if err == nil{
+                  guard let message = response?.message else{return}
+                  
+                  if status!{
+                      self.counterItem += 1
+                      print(message)
+                   
+                  }else{
+                  }
+              }
+          })
+      }
 
    
 }

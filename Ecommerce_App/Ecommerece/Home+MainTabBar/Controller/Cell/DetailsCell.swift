@@ -62,6 +62,11 @@ class DetailsCell: UITableViewCell {
                 if status!{
                     self.counterItem += 1
                     print(message)
+                    let alert = UIAlertController(title: "شكرا لك ", message: "تم اضافه المنتج بنجاح", preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
+                    UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
+
+                                                   
                 }else{
                 }
             }

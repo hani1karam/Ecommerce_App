@@ -46,6 +46,7 @@ class ViewController: UIViewController {
             if err == nil {
                 if respone!.status!
                 {
+                    NetworkHelper.accessToken = respone?.accessToken ?? "" 
                     
                  let HomeVC = MainTabBar.instance()
                                                    HomeVC.modalPresentationStyle = .fullScreen
