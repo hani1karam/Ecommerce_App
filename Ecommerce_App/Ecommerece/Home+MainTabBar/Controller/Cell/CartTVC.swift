@@ -44,11 +44,16 @@ class CartTVC: UITableViewCell {
         self.product = item
         guard let imgURL = item.product_image, let qnt = item.quantity, let priceString = item.price, let price = Double(priceString) else{return}
         self.name.text = item.product_name
+       print (imgURL)
+         DispatchQueue.main.async {
+        self.img.setImage(imageUrl: imgURL)
+
+        }
         func configure(compines: Datum) {
             
             DispatchQueue.main.async {
                 if let img = compines.image{
-                    self.img.setImage(imageUrl: img)
+                   // self.img.setImage(imageUrl: img)
                 }
             }
         }

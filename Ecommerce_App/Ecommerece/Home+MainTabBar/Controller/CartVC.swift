@@ -14,7 +14,7 @@ class CartVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
     @IBOutlet weak var CartTableView: UITableView!
     
     var header = ["Authorization": "Bearer\(NetworkHelper.getAccessToken() ?? "" )"]
-    var items:[Item] = []
+    var items = [Item]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,9 +33,11 @@ class CartVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
                     
                     print(message)
                 }else{
-                    
+                    // Here you have to Fill the array item with items come from API then reload
                 }
+                self.items = response?.data as! [Item]
                 self.CartTableView.reloadData()
+               
                 
             }
             

@@ -66,14 +66,20 @@ class DetailsVC: UIViewController,UITableViewDelegate,UITableViewDataSource{
         cell.price.text = "السعر:  \(details[indexPath.row].price ?? "")"
         cell.configure(compines: self.details[indexPath.row])
         cell.CartButton.tag = indexPath.row
-        // cell.CartButton.addTarget(self, action: #selector(subscribeTapped(_:)), for: .touchUpInside)
+        cell.CartButton.addTarget(self, action: #selector(subscribeTapped(_:)), for: .touchUpInside)
         
         
         return cell
     }
     @objc func subscribeTapped(_ sender: UIButton){
         // use the tag of button as index
+        let youtuber = details[sender.tag]
+        let alert = UIAlertController(title: "شكرا لك ", message: "تم اضافه المنتج بنجاح: \(youtuber.name)", preferredStyle: .alert)
+        let okaction = UIAlertAction(title: "ok", style: .default, handler: nil)
+        alert.addAction(okaction)
+        
         guard let id = product?.id else{return}
+        
         
         NetworkApi.sendRequest(method: .get, url: cart, parameters: ["product_id": id], header: header, completion: { (err,status,response: CartResponse?) in
             if err == nil{

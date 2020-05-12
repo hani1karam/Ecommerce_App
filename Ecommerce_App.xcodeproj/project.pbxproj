@@ -34,6 +34,8 @@
 		D7AACF292464A6DE00A75F8E /* CartResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AACF282464A6DD00A75F8E /* CartResponse.swift */; };
 		D7AACF2B2464E07300A75F8E /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AACF2A2464E07300A75F8E /* CartVC.swift */; };
 		D7AACF2D2464ECFB00A75F8E /* CartTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AACF2C2464ECFB00A75F8E /* CartTVC.swift */; };
+		D7AACF2F2465EF8800A75F8E /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AACF2E2465EF8800A75F8E /* AccountVC.swift */; };
+		D7AACF312465F47100A75F8E /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AACF302465F47100A75F8E /* UserResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		D7AACF282464A6DD00A75F8E /* CartResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartResponse.swift; sourceTree = "<group>"; };
 		D7AACF2A2464E07300A75F8E /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
 		D7AACF2C2464ECFB00A75F8E /* CartTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTVC.swift; sourceTree = "<group>"; };
+		D7AACF2E2465EF8800A75F8E /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
+		D7AACF302465F47100A75F8E /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +190,7 @@
 				D7AACF112463BF9000A75F8E /* Compines.swift */,
 				D7AACF22246487A900A75F8E /* Details.swift */,
 				D7AACF282464A6DD00A75F8E /* CartResponse.swift */,
+				D7AACF302465F47100A75F8E /* UserResponse.swift */,
 				D7AACF1F2463C94800A75F8E /* NetworkManager */,
 			);
 			path = Model;
@@ -198,6 +203,7 @@
 				D7AACF0B2463B7B700A75F8E /* HomeVC.swift */,
 				D7AACF2024647F9A00A75F8E /* DetailsVC.swift */,
 				D7AACF2A2464E07300A75F8E /* CartVC.swift */,
+				D7AACF2E2465EF8800A75F8E /* AccountVC.swift */,
 				D7AACF1C2463C8F300A75F8E /* Cell */,
 			);
 			path = Controller;
@@ -374,8 +380,10 @@
 				D7AACF162463C3AB00A75F8E /* HomeCollectionCell.swift in Sources */,
 				D7AACF182463C49C00A75F8E /* KingFisher.swift in Sources */,
 				D7AACF102463BC5400A75F8E /* MainTabBar.swift in Sources */,
+				D7AACF312465F47100A75F8E /* UserResponse.swift in Sources */,
 				D7AACF2124647F9A00A75F8E /* DetailsVC.swift in Sources */,
 				D7AACF2524648A3100A75F8E /* NetworkHelper.swift in Sources */,
+				D7AACF2F2465EF8800A75F8E /* AccountVC.swift in Sources */,
 				D7AACF2D2464ECFB00A75F8E /* CartTVC.swift in Sources */,
 				D70426F2246337F500EB1D04 /* Ecommerce_App.xcdatamodeld in Sources */,
 				D7AACF012463A94E00A75F8E /* NETWORKMANAGER.swift in Sources */,

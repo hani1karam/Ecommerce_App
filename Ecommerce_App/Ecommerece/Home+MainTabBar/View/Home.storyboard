@@ -292,21 +292,103 @@
             </objects>
             <point key="canvasLocation" x="1353.6231884057972" y="995.75892857142856"/>
         </scene>
-        <!--Item 2-->
+        <!--Account-->
         <scene sceneID="qe9-aa-yP7">
             <objects>
-                <viewController id="KdO-0Z-sjr" sceneMemberID="viewController">
+                <viewController id="KdO-0Z-sjr" customClass="AccountVC" customModule="Ecommerce_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JxF-WL-hAD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="585e4bcdcb11b227491c3396" translatesAutoresizingMaskIntoConstraints="NO" id="xTE-tv-KWc">
+                                <rect key="frame" x="87" y="44" width="240" height="224"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="HTm-NX-QlQ"/>
+                                    <constraint firstAttribute="height" constant="224" id="Vzz-CY-Y46"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="75" translatesAutoresizingMaskIntoConstraints="NO" id="3iy-eL-Pkq">
+                                <rect key="frame" x="20" y="339" width="374" height="324"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N1I-II-aUj" customClass="YokoTextField" customModule="TextFieldEffects">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="58"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="58" id="Z5v-aT-fA7"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kCz-BO-TJf" customClass="YokoTextField" customModule="TextFieldEffects">
+                                        <rect key="frame" x="0.0" y="133" width="374" height="58"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="58" id="MfF-6e-x8z"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="phone" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kjt-bD-Wxw" customClass="YokoTextField" customModule="TextFieldEffects">
+                                        <rect key="frame" x="0.0" y="266" width="374" height="58"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="58" id="YVZ-Yx-5ix"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xip-wa-PIC">
+                                <rect key="frame" x="20" y="704" width="374" height="59"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="تم"/>
+                                <connections>
+                                    <action selector="DonUpdateInformation:" destination="KdO-0Z-sjr" eventType="touchUpInside" id="NJN-Bh-OX9"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="xTE-tv-KWc" firstAttribute="top" secondItem="GFh-os-7vy" secondAttribute="top" id="5sl-SO-coT"/>
+                            <constraint firstItem="Xip-wa-PIC" firstAttribute="leading" secondItem="GFh-os-7vy" secondAttribute="leading" constant="20" id="7IH-Yh-zcT"/>
+                            <constraint firstItem="GFh-os-7vy" firstAttribute="trailing" secondItem="xTE-tv-KWc" secondAttribute="trailing" constant="87" id="9CI-2a-kpj"/>
+                            <constraint firstItem="GFh-os-7vy" firstAttribute="bottom" secondItem="3iy-eL-Pkq" secondAttribute="bottom" constant="150" id="ASL-Iq-Jid"/>
+                            <constraint firstItem="3iy-eL-Pkq" firstAttribute="leading" secondItem="GFh-os-7vy" secondAttribute="leading" constant="20" id="H4k-5c-Cu4"/>
+                            <constraint firstItem="GFh-os-7vy" firstAttribute="trailing" secondItem="3iy-eL-Pkq" secondAttribute="trailing" constant="20" id="Pwz-nh-4Ga"/>
+                            <constraint firstItem="xTE-tv-KWc" firstAttribute="leading" secondItem="GFh-os-7vy" secondAttribute="leading" constant="87" id="bzT-CK-67n"/>
+                            <constraint firstItem="GFh-os-7vy" firstAttribute="bottom" secondItem="Xip-wa-PIC" secondAttribute="bottom" constant="50" id="dcW-jl-6qh"/>
+                            <constraint firstItem="3iy-eL-Pkq" firstAttribute="top" secondItem="GFh-os-7vy" secondAttribute="top" constant="295" id="hsJ-7r-Vkm"/>
+                            <constraint firstItem="Xip-wa-PIC" firstAttribute="top" secondItem="3iy-eL-Pkq" secondAttribute="bottom" constant="41" id="ypT-Ll-jle"/>
+                            <constraint firstItem="GFh-os-7vy" firstAttribute="trailing" secondItem="Xip-wa-PIC" secondAttribute="trailing" constant="20" id="yrO-VO-AnX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="GFh-os-7vy"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="8eg-Hf-yPN"/>
+                    <tabBarItem key="tabBarItem" title="Account" image="AI_user" id="8eg-Hf-yPN"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="kCz-BO-TJf" id="ulR-Em-L8M"/>
+                        <outlet property="nameTextField" destination="N1I-II-aUj" id="ZnC-lM-IRK"/>
+                        <outlet property="phoneTextField" destination="kjt-bD-Wxw" id="KOt-aS-hv6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cmP-4i-hpf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1588" y="266"/>
+            <point key="canvasLocation" x="-1588.4057971014495" y="265.84821428571428"/>
         </scene>
         <!--Cart-->
         <scene sceneID="Ah5-Rb-pko">
@@ -408,8 +490,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AI_cart-1" width="17" height="16"/>
+        <image name="585e4bcdcb11b227491c3396" width="168.5" height="162"/>
+        <image name="AI_cart-1" width="17" height="16.5"/>
         <image name="AI_home-1" width="16.5" height="16.5"/>
+        <image name="AI_user" width="16.5" height="16.5"/>
         <image name="Path 15751" width="17" height="28"/>
         <image name="cart" width="42" height="43.5"/>
     </resources>
